@@ -8,7 +8,7 @@ const Nav = () => {
                 <div className='flex justify-between items-center h-full'>
                     <Link href={`#AboutUs`}>About Us</Link>
                     <Link href={`#Contact`}>Contact</Link>
-                    <Link href={`/experiences`}>Experiences</Link>
+                    <Link href={`/`}>Experiences</Link>
                 </div>
             </div>
         </div>
