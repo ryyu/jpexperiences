@@ -25,7 +25,7 @@ const AboutUs = () => {
   return (
     <MaxWidthWrapper>
     <div id={'AboutUs'} className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
-        <h1 className='text-4xl font-bold tracking-light text-slate-100 sm:text-6xl'>We've done the research for you</h1>
+        <h1 className='text-4xl font-bold tracking-light text-slate-100 sm:text-6xl'>We&apos;ve done the research for you</h1>
         <p className='mt-6 text-lg max-w-prose text-muted-foreground'>With extensive experience trecking across the Japanese countryside, we know what makes for a {' '}
             <span className='text-blue-600'>once in a lifetime</span> {' '}adventure
         </p>
