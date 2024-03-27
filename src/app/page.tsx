@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
         <Image
-            src={`${basePath}/IMG_1807.JPG`}
+            src={`/IMG_1807.JPG`}
             alt="bg image"
             quality={100}
             fill
