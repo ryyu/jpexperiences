@@ -20,8 +20,10 @@ import { Label } from "@/components/ui/label"
 import DatePickerWithRange from "@/components/DatePickerWithRange";
 import { Textarea } from "@/components/ui/textarea";
 
+import config from '../../next.config.mjs';
 
 export default function Home() {
+  const basePath = config.basePath;
   return (
     <>
       <section className="h-screen relative">
@@ -40,12 +42,14 @@ export default function Home() {
           </div>
         </div>
         <Image
-            src={'/IMG_1807.JPG'}
+            src={`${basePath}/IMG_1807.JPG`}
             alt="bg image"
             quality={100}
             fill
             className="-z-10"
-            objectFit="cover"
+            style={{
+              objectFit: "cover"
+            }}
             ></Image>
       </MaxWidthWrapper>
       </section>
