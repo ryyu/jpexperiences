@@ -53,14 +53,14 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v4
+      #   with:
+      #     # Automatically inject basePath in your Next.js configuration file and disable
+      #     # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+      #     #
+      #     # You may remove this line if you want to manage the configuration yourself.
+      #     static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -75,14 +75,13 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build and Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Zip all files for upload between jobs
-        # IMPORTANT: .next is a hidden folder and will not be included in the zip unless it is included
-        run: zip next.zip ./* .next -qr
+      # - name: Zip all files for upload between jobs
+      #   # IMPORTANT: .next is a hidden folder and will not be included in the zip unless it is included
+      #   run: zip next.zip ./* .next -qr
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: node-app
-          path: next.zip
+          path: ./out
 
   # Deployment job
   deploy:
