@@ -12,7 +12,8 @@ import {
     CarouselPrevious,
   } from "@/components/ui/carousel"
 import MaxWidthWrapper from './MaxWidthWrapper'
-  
+
+import config from "../../next.config.mjs";
 
 const imageSrc = [
     "IMG_1803.JPG",
@@ -22,6 +23,7 @@ const imageSrc = [
 ]
 
 const AboutUs = () => {
+    const basePath = config.basePath;
   return (
     <MaxWidthWrapper>
     <div id={'AboutUs'} className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
@@ -36,7 +38,7 @@ const AboutUs = () => {
                         
                             
                             <img 
-                                src='/IMG_1803.JPG'
+                                src={`${basePath}/IMG_1803.JPG`}
                                 className='rounded-xl'
                                 style={{
                                     objectFit: 'cover'
@@ -51,7 +53,7 @@ const AboutUs = () => {
                     <div className="p-1 aspect-square">
                         
                             <img 
-                                src="/IMG_1808.JPG"
+                                src={`${basePath}/IMG_1808.JPG`}
                                 className='rounded-xl'
                                 style={{
                                     objectFit: 'cover'
@@ -67,7 +69,7 @@ const AboutUs = () => {
                     <div className="p-1 aspect-square">
                         
                             <img 
-                                src="/IMG_1804.JPG"
+                                src={`${basePath}/IMG_1804.JPG`}
                                 className='rounded-xl'
                                 style={{
                                     objectFit: 'cover'
@@ -82,7 +84,7 @@ const AboutUs = () => {
                     <div className="p-1 aspect-square">
                         
                             <img 
-                                src="/IMG_1809.JPG"
+                                src={`${basePath}/IMG_1809.JPG`}
                                 className='roundedxl'
                                 style={{
                                     objectFit: 'cover'
